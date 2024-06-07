@@ -1,10 +1,15 @@
 def capitalize_lines():
-    lines = [
-        "hello world practice makes perfect"
-    ]
+    print("Enter the text : ")
+    lines = []
+    
+    while True:
+        line = input()
+        if line == "":
+            break
+        lines.append(line.upper())
     
     for line in lines:
-        print(line.upper())
+        print(line)
  
 # Run the function
 capitalize_lines()
