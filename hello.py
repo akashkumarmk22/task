@@ -3,7 +3,7 @@ def capitalize_lines():
     
     line = "AKASH"    
     print(line.lower())
-    line = "akash"    
+    line = "akash loves jaanu"    
     print(line.upper())
 
 # Run the function
