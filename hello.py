@@ -1,8 +1,8 @@
 def capitalize_lines():
     print("Enter the text : ")
     
-    line = "Hello world Practice makes perfect"    
-    print(line.upper())
+    line = "AKASH"    
+    print(line.lower())
 
 # Run the function
 capitalize_lines()
