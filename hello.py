@@ -3,6 +3,8 @@ def capitalize_lines():
     
     line = "AKASH"    
     print(line.lower())
+    line = "akash"    
+    print(line.upper())
 
 # Run the function
 capitalize_lines()
