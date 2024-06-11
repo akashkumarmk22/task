@@ -1,7 +1,7 @@
 def capitalize_lines():
     print("Enter the text : ")
     
-    line = "jaanu"    
+    line = "hello word this is akash"    
     print(line.upper())
 
 # Run the function
