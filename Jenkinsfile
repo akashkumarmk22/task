@@ -18,15 +18,15 @@ pipeline {
             steps {
                 // Install necessary Python packages
                 //sh 'pip install ${PIP_REQUIREMENTS}'
-                bat "${PYTHON_HOME} -m pip install --upgrade pip"
-                bat "${PYTHON_HOME} -m pip install ${PIP_REQUIREMENTS}"
+                bat "${env.PYTHON_HOME} -m pip install --upgrade pip"
+                bat "${env.PYTHON_HOME} -m pip install ${env.PIP_REQUIREMENTS}"
             }
         }
  
         stage('Execute Python Script') {
             steps {
                 // Execute the Python script
-                bat '${PYTHON_HOME} acchu.py'
+                bat '${env.PYTHON_HOME} acchu.py'
             }
         }
  
