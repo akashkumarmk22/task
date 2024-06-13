@@ -1,10 +1,6 @@
 pipeline {
     agent any
  
-    tools {
-        python 'Python3'  // This should match the name you configured in Jenkins
-    }
- 
     environment {
         PIP_REQUIREMENTS = 'pandas openpyxl'
         PYTHON_HOME = '/usr/bin/python3'
