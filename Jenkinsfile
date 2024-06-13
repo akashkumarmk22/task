@@ -2,20 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('version') {
             steps {
-                checkout scmGit(branches: [[name: '*/new']], extensions: [], userRemoteConfigs: [[credentialsId: 'githubtoken', url: 'https://github.com/akashkumarmk22/task.git']])
+                sh 'python --version'
             }
         }
         stage('Build'){
             steps {
-                git branch: 'new', credentialsId: 'githubtoken', url: 'https://github.com/akashkumarmk22/task.git'
+                sh 'python3 acchu.py'
                 
-            }
-        }
-        stage {
-            always {
-                archiveArtifacts 'student_marks.xlst'
             }
         }
     }
