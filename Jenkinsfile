@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build'){
             steps {
-                git branch: 'new', credentialsId: 'githubtoken', url: 'https://github.com/akashkumarmk22/task.git'
+                sh 'python acchu.py'
                 
             }
         }
