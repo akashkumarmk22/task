@@ -36,7 +36,7 @@ pipeline {
                 emailext(
                     to: 'akashkumarmk02@gmail.com',
                      subject: 'Jenkins Job Notification',
-                     body: 'The Python script has been executed and the Excel file has been created.'
+                     body: 'The Python script has been executed and the Excel file has been created.',
                      from: 'akashkumarmk02@gmail.com',
                      smtpHost: 'smtp.gmail.com',
                      smtpPort: '465',
