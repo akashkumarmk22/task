@@ -10,7 +10,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the Git repository
-                git 'https://github.com/akashkumarmk22/task.git'
+                git url: 'https://github.com/akashkumarmk22/task.git', branch: 'new'
             }
         }
  
