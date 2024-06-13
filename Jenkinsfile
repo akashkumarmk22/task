@@ -3,7 +3,7 @@ pipeline {
  
     environment {
         PIP_REQUIREMENTS = 'pandas openpyxl'
-        PYTHON_HOME = 'C:\\Python39\python.exe'
+        PYTHON_HOME = 'C:/Python39/python.exe'
     }
  
     stages {
