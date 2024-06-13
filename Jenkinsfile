@@ -33,9 +33,15 @@ pipeline {
         stage('Send Email') {
             steps {
                 // Send an email (this assumes you have email configured in Jenkins)
-                mail to: 'akashkumarmk02@gmail.com',
+                emailext(
+                    to: 'akashkumarmk02@gmail.com',
                      subject: 'Jenkins Job Notification',
                      body: 'The Python script has been executed and the Excel file has been created.'
+                     from: 'akashkumarmk02@gmail.com',
+                     smtpHost: 'smtp.gmail.com',
+                     smtpPort: '465',
+                     mimeType: 'text/html',
+                     attachLog: true)
             }
         }
     }
