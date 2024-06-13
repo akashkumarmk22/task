@@ -13,5 +13,10 @@ pipeline {
                 
             }
         }
+        post {
+            always {
+                archiveArtifacts 'student_marks.xlst'
+            }
+        }
     }
 }
