@@ -38,8 +38,7 @@ pipeline {
                      subject: 'Jenkins Job Notification',
                      body: 'The Python script has been executed and the Excel file has been created.',
                      to: 'akashkumarmk02@gmail.com',
-                     replyTo: 'akashkumarmk02@gmail.com',
-                     replyToAddress: 'akashkumarmk300@gmail.com',
+                     replyTo: 'akashkumarmk300@gmail.com',
                      mimeType: 'text/html',
                      attachLog: true)
             }
