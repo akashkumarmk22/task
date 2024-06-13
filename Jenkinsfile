@@ -7,6 +7,7 @@ pipeline {
  
     environment {
         PIP_REQUIREMENTS = 'pandas openpyxl'
+        PYTHON_HOME = '/usr/bin/python3'
     }
  
     stages {
@@ -20,14 +21,16 @@ pipeline {
         stage('Setup Python Environment') {
             steps {
                 // Install necessary Python packages
-                sh 'pip install ${PIP_REQUIREMENTS}'
+                //sh 'pip install ${PIP_REQUIREMENTS}'
+                sh "${PYTHON_HOME} -m pip install -- upgrade pip"
+                sh "${PYTHON_HOME} -m pip install ${PIP_REQUIREMENTS}"
             }
         }
  
         stage('Execute Python Script') {
             steps {
                 // Execute the Python script
-                sh 'python3 acchu.py'
+                sh '${PYTHON_HOME} acchu.py'
             }
         }
  
