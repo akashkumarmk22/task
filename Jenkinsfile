@@ -59,12 +59,11 @@ pipeline {
                 }
             }
         }
- 
+    }
     post {
         always {
             // Archive the created Excel file
             archiveArtifacts artifacts: 'student_data.xlsx'
         }
     }
-}
 }
