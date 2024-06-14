@@ -38,7 +38,7 @@ pipeline {
                     for (int i = 0; i < retries; i++) {
                         try {
                             emailext (
-                                subject: "Jenkins Job Notification",
+                                subject: "Jenkins Job Notification", //subject
                                 body: "The Python script has been executed and the Excel file has been created.",
                                 to: 'akashkumarmk300@gmail.com',
                                 replyTo: 'akashkumarmk300@gmail.com',  // Specify your email address here
