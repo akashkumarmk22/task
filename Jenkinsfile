@@ -43,7 +43,7 @@ pipeline {
                                 to: 'akashkumarmk300@gmail.com',
                                 replyTo: 'akashkumarmk300@gmail.com',  // Specify your email address here
                                 mimeType: 'text/html',
-                                attachLog: false
+                                attachLog: true
                             )
                             success = true
                             break
