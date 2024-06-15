@@ -13,15 +13,15 @@ sheet1.title = "Student Data"
 # Populate the first sheet with data sheet1.append(["Student Name", "Roll No.", "Subject", "Marks"])
  
 data = [
-("John", 101, "Math", 90),
-("Alice", 102, "Math", 85),
-("Bob", 103, "Math", 88),
-("John", 101, "Science", 75),
-("Alice", 102, "Science", 80),
-("Bob", 103, "Science", 82),
-("John", 101, "English", 78),
-("Alice", 102, "English", 85),
-("Bob", 103, "English", 80),
+("Akash", 101, "Math", 90),
+("vishwa", 102, "Math", 85),
+("Nagendra", 103, "Math", 88),
+("Akash", 101, "Science", 75),
+("vishwa", 102, "Science", 80),
+("Nagendra", 103, "Science", 82),
+("Akash", 101, "English", 78),
+("vishwa", 102, "English", 85),
+("Nagendra", 103, "English", 80),
 ]
  
 for row in data: sheet1.append(row)
