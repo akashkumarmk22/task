@@ -26,7 +26,7 @@ pipeline {
         stage('Execute Python Script') {
             steps {
                 // Execute the Python script
-                bat '%PYTHON_HOME% acchu.py'
+                bat '%PYTHON_HOME% pythonfile.py'
             }
         }
  
