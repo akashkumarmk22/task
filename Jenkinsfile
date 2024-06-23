@@ -8,6 +8,7 @@ pipeline {
         ARTIFACTORY_SERVER_ID = 'artifactory1'
         ARTIFACTORY_REPO = 'Generic-repo1'  // Your Artifactory repository name
 		ARTIFACTORY_USER = 'admin'
+	    FilePath = 'C:/ProgramData/Jenkins/.jenkins/workspace/pythonProject1'
     }
  
     stages {
@@ -39,7 +40,7 @@ pipeline {
                 script {
                     try {
                         // Upload the Excel file to Artifactory
-                        bat "%JFROG_CLI_HOME% rt u 'student_data.xlsx' %ARTIFACTORY_REPO%/student_data.xlsx --server-id=%ARTIFACTORY_SERVER_ID%"
+                        bat "%JFROG_CLI_HOME% rt u 'FilePath' %ARTIFACTORY_REPO%/FilePath --server-id=%ARTIFACTORY_SERVER_ID%"
                     } catch (Exception e) {
                         echo "Upload to Artifactory failed: ${e}"
                         currentBuild.result = 'FAILURE'
