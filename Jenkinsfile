@@ -23,7 +23,7 @@ pipeline {
             steps {
                 // Install necessary Python packages
                 //sh 'pip install ${PIP_REQUIREMENTS}'
-                //bat "%PYTHON_HOME% -m get-pip.py"
+                bat "%PYTHON_HOME% -m get-pip.py"
                 bat "%PYTHON_HOME% -m pip install --upgrade pip"
                 bat "%PYTHON_HOME% -m pip install %PIP_REQUIREMENTS%"
             }
