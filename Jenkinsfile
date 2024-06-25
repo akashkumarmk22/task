@@ -3,7 +3,7 @@ pipeline {
  
     environment {
         PIP_REQUIREMENTS = 'pandas openpyxl'
-        PYTHON_HOME = 'C:/python.exe'
+        PYTHON_HOME = 'C:/Users/cvsam/AppData/Local/Programs/Python/Python311/python.exe'
         PATH = "${PYTHON_HOME};${env.PATH}"
 	JFROG_CLI_HOME = 'C:/artifactory-pro-7.23.3/jf.exe'  // Update with the path to jfrog executable
         ARTIFACTORY_SERVER_ID = 'artifactory1'
@@ -26,8 +26,8 @@ pipeline {
 		bat "curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py"
                 bat "${env.PYTHON_HOME} get-pip.py"
                 bat '''
-                    SET PATH=%PATH%;C://Scripts
-                    C:/python.exe -m pip install --upgrade pip
+                    SET PATH=%PATH%;C:/Scripts
+                    C:/Users/cvsam/AppData/Local/Programs/Python/Python311/python.exe -m pip install --upgrade pip
                 '''
                 //bat "${env.PYTHON_HOME} -m pip install --upgrade pip"
                 bat "${env.PYTHON_HOME} -m pip install openpyxl"
