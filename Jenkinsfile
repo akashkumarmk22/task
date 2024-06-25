@@ -9,7 +9,7 @@ pipeline {
         ARTIFACTORY_SERVER_ID = 'artifactory1'
         ARTIFACTORY_REPO = 'Generic-repo1'  // Your Artifactory repository name
 	ARTIFACTORY_USER = 'admin'
-	    FilePath = 'C:/ProgramData/Jenkins/.jenkins/workspace/pythonProject1'
+	    FilePath = 'C:/ProgramData/Jenkins/.jenkins/workspace/Artifactory'
     }
  
     stages {
