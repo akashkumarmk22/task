@@ -25,7 +25,11 @@ pipeline {
                 // Install necessary Python package
 		bat "curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py"
                 bat "${env.PYTHON_HOME} get-pip.py"
-                bat "${env.PYTHON_HOME} -m pip install --upgrade pip"
+                bat '''
+                    SET PATH=%PATH%;C:\\Scripts
+                    C:/python.exe -m pip install --upgrade pip
+                '''
+                //bat "${env.PYTHON_HOME} -m pip install --upgrade pip"
                 bat "${env.PYTHON_HOME} -m pip install openpyxl"
                 bat "${env.PYTHON_HOME} -m pip install matplotlib"
                 //bat "%PYTHON_HOME% -m pip install --upgrade pip"
