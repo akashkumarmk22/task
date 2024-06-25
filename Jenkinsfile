@@ -11,7 +11,7 @@ pipeline {
 	    ARTIFACTORY_CREDENTIALS_USR = 'admin'
 	    //FilePath = 'C:/ProgramData/Jenkins/.jenkins/workspace/Artifactory'
         ARTIFACTORY_URL = 'http://localhost:8082/artifactory/Generic-repo1/'
-        ARTIFACTORY_CREDENTIALS_PSW = credentials('Akash@22')
+        ARTIFACTORY_CREDENTIALS_PSW = credentials('c0f24f0f-6965-476a-a300-1f64b4076b02')
     }
  
     stages {
