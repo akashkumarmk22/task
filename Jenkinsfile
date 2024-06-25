@@ -24,10 +24,10 @@ pipeline {
             steps {
                 // Install necessary Python package
 		bat "curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py"
-                bat "${env.PYTHON_HOME}/python.exe get-pip.py"
-                bat "${env.PYTHON_HOME}/python.exe -m pip install --upgrade pip"
-                bat "${env.PYTHON_HOME}/python.exe -m pip install openpyxl"
-                bat "${env.PYTHON_HOME}/python.exe -m pip install matplotlib"
+                bat "${env.PYTHON_HOME} get-pip.py"
+                bat "${env.PYTHON_HOME} -m pip install --upgrade pip"
+                bat "${env.PYTHON_HOME} -m pip install openpyxl"
+                bat "${env.PYTHON_HOME} -m pip install matplotlib"
                 //bat "%PYTHON_HOME% -m pip install --upgrade pip"
                 //bat "%PYTHON_HOME% -m pip install %PIP_REQUIREMENTS%"
             }
@@ -36,7 +36,7 @@ pipeline {
         stage('Execute Python Script') {
             steps {
                 // Execute the Python script
-		bat "${env.PYTHON_HOME}/python.exe pythonfile.py"
+		bat "${env.PYTHON_HOME} pythonfile.py"
                 //bat '%PYTHON_HOME% pythonfile.py'
             }
         }
