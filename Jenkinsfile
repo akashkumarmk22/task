@@ -3,7 +3,7 @@ pipeline {
  
     environment {
         PIP_REQUIREMENTS = 'pandas openpyxl'
-        PYTHON_HOME = 'C:/Python39'
+        PYTHON_HOME = 'C:/python.exe'
         PATH = "${PYTHON_HOME};${env.PATH}"
 	JFROG_CLI_HOME = 'C:/artifactory-pro-7.23.3/jf.exe'  // Update with the path to jfrog executable
         ARTIFACTORY_SERVER_ID = 'artifactory1'
