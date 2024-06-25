@@ -10,8 +10,8 @@ pipeline {
         ARTIFACTORY_REPO = 'Generic-repo1'  // Your Artifactory repository name
 	    ARTIFACTORY_CREDENTIALS_USR = 'admin'
 	    //FilePath = 'C:/ProgramData/Jenkins/.jenkins/workspace/Artifactory'
-        ARTIFACTORY_URL = 'http://localhost:8082/artifactory/Generic-repo1/'
-        ARTIFACTORY_CREDENTIALS_PSW = credentials('c0f24f0f-6965-476a-a300-1f64b4076b02')
+        //ARTIFACTORY_URL = 'http://localhost:8082/artifactory/Generic-repo1/'
+       // ARTIFACTORY_CREDENTIALS_PSW = credentials('c0f24f0f-6965-476a-a300-1f64b4076b02')
     }
  
     stages {
@@ -50,10 +50,9 @@ pipeline {
 		stage('Upload to JFrog Artifactory') {
             steps {
                 script {
-                    def filePath = 'C:/ProgramData/Jenkins/.jenkins/workspace/Artifactory'
                     
                     bat """
-                        C:/artifactory-pro-7.23.3/jf.exe rt u ${filePath} --url=${env.ARTIFACTORY_URL} --user=${env.ARTIFACTORY_CREDENTIALS_USR} --password=${env.ARTIFACTORY_CREDENTIALS_PSW} --server-id=${env.ARTIFACTORY_SERVER_ID}
+                        C:/artifactory-pro-7.23.3/jf.exe rt u "C:/ProgramData/Jenkins/.jenkins/workspace/Artifactory/*" "Generic-repo1/" --url=http://localhost:8082/artifactory/ --user=admin --password=Akash@22 --server-id=artifactory1
                     """
                 }
             }
