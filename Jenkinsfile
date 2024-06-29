@@ -7,7 +7,9 @@ pipeline {
         PATH = "${PYTHON_HOME};${env.PATH}"
     }
 
-    stage('Setup Python Environment') {
+
+    stages {
+        stage('Setup Python Environment') {
             steps {
                 // Install necessary Python packages
                 //sh 'pip install ${PIP_REQUIREMENTS}'
@@ -15,8 +17,6 @@ pipeline {
                 bat "${env.PYTHON_HOME} -m pip install %PIP_REQUIREMENTS%"
             }
         }
-
-    stages {
         stage('Insert Data') {
             steps {
                 script {
