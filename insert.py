@@ -6,7 +6,7 @@ def insert_data(roll_number, name, marks, subject):
         connection = psycopg2.connect(
             dbname="postgres",
             user="postgres", 
-            password="Akash@22",
+            password="Akash22",
             host="localhost"
         )
         cursor = connection.cursor()
