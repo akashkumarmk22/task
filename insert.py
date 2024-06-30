@@ -30,3 +30,4 @@ def insert_data(roll_number, name, marks, subject):
 if __name__ == "__main__":
     insert_data(1, 'Akash', 85, 'Math')
     insert_data(2, 'Rakshu', 92, 'Science')
+    insert_data(3, 'Ranju', 82, 'English')
