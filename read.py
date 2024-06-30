@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 def read_data():
     try:
         # Update the connection string with your actual PostgreSQL credentials
-        engine = create_engine('postgresql+psycopg2://postgres:Akash22@localhost/postgres')
+        engine = create_engine('postgresql+psycopg2://postgres:Akash22@localhost/school')
         query = "SELECT * FROM students"
         df = pd.read_sql_query(query, engine)
         df.to_excel("students.xlsx", index=False)

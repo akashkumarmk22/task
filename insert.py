@@ -4,7 +4,7 @@ import pandas as pd
 def insert_data(roll_number, name, marks, subject):
     try:
         connection = psycopg2.connect(
-            dbname="postgres",
+            dbname="school",
             user="postgres", 
             password="Akash22",
             host="localhost"
