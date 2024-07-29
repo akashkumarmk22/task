@@ -10,6 +10,7 @@ pipeline {
             steps {
                 script {
                     bat "${env.PYTHON_HOME}/python.exe hello.py"
+                }
             }
         }
     }
